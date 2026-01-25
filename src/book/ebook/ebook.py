@@ -20,7 +20,7 @@ class Ebook:
         self.publisher: str | None = None
         self.identifiers: list[EbookIdentifier] = []
         self.subjects: list[str] | None = None
-        self.date: datetime | None = None
+        self.published_at: datetime | None = None
         self.meta: list[EbookMeta] = []
         self.series: str | None = None
         self.volume: float | None = None
@@ -80,9 +80,9 @@ class Ebook:
             self.description = self._extract_str("description")
             self.publisher = self._extract_str("publisher")
             self.subjects = self._extract_list_str("subject")
-            date = self._extract_str("date")
-            if date:
-                self.date = datetime.fromisoformat(str(date))
+            published_at = self._extract_str("date")
+            if published_at:
+                self.published_at = datetime.fromisoformat(str(published_at))
             self._extract_identifiers()
             self._extract_meta()
             self.series = self.get_meta("calibre:series")
@@ -133,7 +133,8 @@ class Ebook:
             try:
                 _ = value[0]
                 iter(value)
-                items.append(value[0])
+                v: str = str(value[0])
+                items.append(v.strip().capitalize())
             except (TypeError, IndexError, KeyError):
                 continue
 
@@ -151,10 +152,10 @@ class Ebook:
             f"creators: {self.creators}\n"
             f"description: {self.description}\n"
             f"publisher: {self.publisher}\n"
-            f"identifiers: {len(self.identifiers)}\n"
+            f"identifiers: {len(self.identifiers)} items\n"
             f"subjects: {self.subjects}\n"
-            f"date: {self.date}\n"
-            f"meta: {len(self.meta)}\n"
+            f"published_at: {self.published_at}\n"
+            f"meta: {len(self.meta)} items\n"
             f"series: {self.series}\n"
             f"volume: {self.volume}\n"
             f"identifier_isbn: {self.identifier_isbn}\n"
@@ -164,7 +165,7 @@ class Ebook:
             f"title_sort: {self.title_sort}\n"
             f"created_at: {self.created_at}\n"
             f"rating: {self.rating}\n"
-            f"images: {len(self.images)}\n"
+            f"images: {len(self.images)} items\n"
             "----------\n"
         )
         return f"{details}"

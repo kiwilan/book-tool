@@ -2,6 +2,10 @@ from typing import Any
 
 
 class EbookIdentifier:
+    # <dc:identifier opf:scheme="ISBN">9782070309597</dc:identifier>
+    # <dc:identifier opf:scheme="AMAZON">2277232629</dc:identifier>
+    # <dc:identifier id="uuid_id" opf:scheme="uuid">25f65cf1-4f6e-4bac</dc:identifier>
+    # <dc:identifier opf:scheme="calibre">25f65cf1-4f6e-4bac-9501-2dac69cca495</dc:identifier>
     def __init__(self, value: Any):
         identifier_value = value[0]
         scheme_dict = value[1]
@@ -13,11 +17,6 @@ class EbookIdentifier:
 
         self.scheme = scheme.lower()
         self.value = str(identifier_value)
-
-    # <dc:identifier opf:scheme="ISBN">9782070309597</dc:identifier>
-    # <dc:identifier opf:scheme="AMAZON">2277232629</dc:identifier>
-    # <dc:identifier id="uuid_id" opf:scheme="uuid">25f65cf1-4f6e-4bac</dc:identifier>
-    # <dc:identifier opf:scheme="calibre">25f65cf1-4f6e-4bac-9501-2dac69cca495</dc:identifier>
 
     def __str__(self) -> str:
         details = (
