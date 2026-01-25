@@ -22,7 +22,7 @@ book-tool build ./path/to/epub
 ### APIs
 
 - [Google Books API](https://developers.google.com/books)
-  - [How to get API key](./docs/google-books-api.md)
+  - [How to get API key?](./docs/google-books-api.md)
 - [Open Library API](https://openlibrary.org/developers/api)
 - [The StoryGraph API](https://github.com/ym496/storygraph-api)
 
