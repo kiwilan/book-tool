@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "book-cli"
 version = "0.1.0"
-dependencies = ["pyyaml", "dotenv"]
+dependencies = ["dotenv", "ebooklib"]
 requires-python = ">=3.12"
 readme = "README.md"
 description = "Python CLI to handle books."
