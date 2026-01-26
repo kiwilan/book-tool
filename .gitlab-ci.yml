@@ -9,7 +9,7 @@ test-job:
   image: $DOCKER_IMAGE
   script:
     - pip install -e .
-    - book-tool
+    - book-tool -h
     - echo "Ready!"
   only:
     - main
