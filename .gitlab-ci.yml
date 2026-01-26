@@ -10,6 +10,5 @@ test-job:
   script:
     - pip install -e .
     - book-tool -h
-    - echo "Ready!"
   only:
     - main
