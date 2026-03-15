@@ -21,18 +21,12 @@ classifiers = [
 # uv sync
 # uv export --format requirements-txt > requirements.txt
 dependencies = [
-  "ebooklib",                 # import ebooklib (to handle .epub files)
+  # https://pypi.org/project/EbookLib/
+  "ebooklib", # import ebooklib (to handle .epub files)
+  # https://github.com/googleapis/google-api-python-client
   "google-api-python-client", # import googleapiclient (to fetch Google Books API)
-
-  "pyyaml",        # import yaml (to handle .yml files)
-  "mutagen",       # import mutagen (to handle .mp3 and .m4b files)
+  # https://pypi.org/project/python-dotenv/
   "python-dotenv", # import dotenv (to handle .env variables)
-  "httpx",         # import httpx (to download book cover)
-  "rich",          # import rich (help for debugging)
-  # uv run playwright install chromium
-  "playwright",         # import playwright (for Audible web scraping)
-  "playwright-stealth", # import playwright_stealth
-  "pytest>=8.0.2",
 ]
 
 [project.scripts]
