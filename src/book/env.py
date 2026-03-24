@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PART_SIZE = int(os.environ.get("PART_SIZE", 500))
+GOOGLE_BOOKS_API_KEY = str(os.environ.get("GOOGLE_BOOKS_API_KEY", ""))
 
 
 def python_check() -> None:

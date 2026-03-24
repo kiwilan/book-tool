@@ -20,6 +20,8 @@ classifiers = [
 # deptry .
 # uv sync
 # uv export --format requirements-txt > requirements.txt
+# FOR LOCAL DEV
+# uv sync --extra dev
 dependencies = [
   # https://pypi.org/project/EbookLib/
   "ebooklib", # import ebooklib (to handle .epub files)

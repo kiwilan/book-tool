@@ -4,8 +4,8 @@
 
 Python CLI to handle books.
 
-> [!IMPORTANT]
-> Not ready for production.
+> [!WARNING]
+> This CLI is still under development; please feel free to report any issues you encounter or share your suggestions in the [issues](https://github.com/kiwilan/book-tool/issues).
 
 ## Using as CLI
 

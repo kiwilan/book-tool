@@ -1,12 +1,13 @@
 from googleapiclient.discovery import build
 from book.args import BookArgs
+from book.env import GOOGLE_BOOKS_API_KEY
 
 
 def fetch(args: BookArgs):
-    API_KEY = "AIzaSyCHaPTDzaOpGVWG06r56LAJagDGEjCZ42Y"
-
     # Initialisation du service
-    service = build("books", "v1", developerKey=API_KEY, cache_discovery=False)
+    service = build(
+        "books", "v1", developerKey=GOOGLE_BOOKS_API_KEY, cache_discovery=False
+    )
 
     # Exécution de la requête
     query = "intitle:Dune+inauthor:Herbert"
