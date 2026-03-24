@@ -18,7 +18,7 @@
 
 ---
 
-> [!WARNING]
+> [!CAUTION]
 > This CLI is still under development; please feel free to report any issues you encounter or share your suggestions in the [issues](https://github.com/kiwilan/book-tool/issues).
 
 > [!TIP]
