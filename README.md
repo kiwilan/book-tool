@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Ultimate Python CLI to handle audiobooks.
+  Ultimate Python CLI to handle books (eBooks & comics).
 </p>
 
 <p align="center">
@@ -20,6 +20,9 @@
 
 > [!WARNING]
 > This CLI is still under development; please feel free to report any issues you encounter or share your suggestions in the [issues](https://github.com/kiwilan/book-tool/issues).
+
+> [!TIP]
+> Are you looking for CLI designed to handle **audiobooks**? Check [kiwilan/bool-tool](https://github.com/kiwilan/book-tool).
 
 ## Using as CLI
 
