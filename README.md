@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Ultimate Python CLI to handle books (eBooks & comics).
+  Ultimate Python CLI to handle ebooks & comics.
 </p>
 
 <p align="center">
