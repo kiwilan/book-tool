@@ -25,10 +25,12 @@ classifiers = [
 dependencies = [
   # https://pypi.org/project/EbookLib/
   "ebooklib", # import ebooklib (to handle .epub files)
-  # https://github.com/googleapis/google-api-python-client
+  # https://pypi.org/project/google-api-python-client/
   "google-api-python-client", # import googleapiclient (to fetch Google Books API)
   # https://pypi.org/project/python-dotenv/
   "python-dotenv", # import dotenv (to handle .env variables)
+  # https://pypi.org/project/rich/
+  "rich", # import rich (help for debugging)
 ]
 
 [project.scripts]
